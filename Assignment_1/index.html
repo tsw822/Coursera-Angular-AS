@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style>
+        div{
+            padding: 10px;
+        }
+    </style>
+    <title>Lunch Check</title>
+</head>
+<body ng-app="LunchCheck">
+    <h1>Do you eat a lot?</h1>
+    <div ng-controller="lunchCheckController">
+        <p>Enter what you eat for your lunch today, seperate each item by ','</p>
+        <div id="warning">{{warning}}</div>
+        <input type="text" ng-model="lunch"/><br>
+        <div id="message">{{message}}</div><br>
+        <button ng-click="CheckLunchItems()">Check If Too Much</button><br>
+    </div>
+</body>
+</html>
